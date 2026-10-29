@@ -1,0 +1,33 @@
+{
+  "_readme": "Edit these values, then run: python3 build.py. Any value left as \"#\" is a link still to be filled before launch.",
+
+  "site_url": "https://wscf-test.com",
+  "test_mode": true,
+  "_launch_note": "For the real launch: set site_url to https://warmspringscarefarm.org and test_mode to false, then rebuild.",
+  "site_name": "Warm Springs Care Farm",
+
+  "email": "linda@warmspringscarefarm.org",
+  "phone": "208-515-4234",
+  "phone_link": "+12085154234",
+  "volunteer_email": "kory@warmspringscarefarm.org",
+
+  "donate_url": "#",
+  "adult_waiver_url": "#",
+  "child_waiver_url": "#",
+  "volunteer_waiver_url": "#",
+  "barn_club_form_url": "",
+  "teen_crew_form_url": "",
+  "volunteer_form_url": "",
+  "sponsorship_packet_url": "#",
+  "fox_kids_url": "#",
+  "amazon_wishlist_url": "#",
+
+  "newsletter_form_action": "",
+  "calendar_embed_url": "",
+
+  "instagram_url": "",
+  "facebook_url": "",
+
+  "ein": "",
+  "mailing_address": ""
+}
