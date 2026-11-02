@@ -11,7 +11,7 @@
   "phone_link": "+12085154234",
   "volunteer_email": "kory@warmspringscarefarm.org",
 
-  "donate_url": "#",
+  "donate_url": "https://givebutter.com/eju5dV",
   "adult_waiver_url": "#",
   "child_waiver_url": "#",
   "volunteer_waiver_url": "#",
@@ -23,11 +23,12 @@
   "amazon_wishlist_url": "#",
 
   "newsletter_form_action": "",
-  "calendar_embed_url": "",
+  "blog_url": "#",
+  "calendar_embed_url": "https://calendar.google.com/calendar/embed?src=c_e1053214850bebc72b039f64eee8e4339d22fcecb959156ef6880720d631b6bb%40group.calendar.google.com&amp;ctz=America%2FBoise",
 
   "instagram_url": "",
   "facebook_url": "",
 
-  "ein": "",
+  "ein": "87-1279392",
   "mailing_address": ""
 }

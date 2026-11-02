@@ -4,14 +4,14 @@ Everything still needed before launch. Butter-highlighted [brackets] must all be
 
 ## Must have for launch
 - [ ] Confirm main email (linda@warmspringscarefarm.org) and that texting the phone to book is OK — **config** + Visits
-- [ ] Donate link (Givebutter) — **config** `donate_url`
+- [x] Donate link (Givebutter) — **config** `donate_url` (givebutter.com/eju5dV, Nov 2)
 - [ ] Adult, child, and volunteer waiver links (current Google Form?) — **config**
 - [ ] Barn Club timing and suggested donation — Programs
 - [ ] Drop-off policy for Barn Club — Programs FAQ
 - [ ] Parking, restroom, accessibility — Visits
 - [ ] Weather cancellation policy — Visits FAQ
 - [x] Teen volunteer quote permission — Home, Volunteer (confirmed Oct 29)
-- [ ] EIN — **config** `ein`
+- [x] EIN — **config** `ein` (87-1279392, Nov 2)
 - [ ] Current team titles and board list — About
 
 ## Partner programs
@@ -42,7 +42,10 @@ Everything still needed before launch. Butter-highlighted [brackets] must all be
 - [ ] Child-safety reporting steps
 
 ## Nice to have
-- [ ] Newsletter form, calendar embed, Instagram/Facebook links — **config**
+- [x] Calendar embed — **config** (Nov 2)
+- [ ] Newsletter form, Instagram/Facebook links — **config**
+- [ ] Blog address (Ghost subdomain) — **config** `blog_url`; header Blog link points to "#" until set
+- [ ] Confirm Impact numbers (5 acres, 15 animals, 5,000 therapy hours) — About
 - [ ] Event link for "Help at farm events" — Volunteer
 - [ ] Photos for each placeholder (see README)
 - [ ] Choose the tagline (logo: "A place to gather and grow"; brand guidelines: "A place to heal, connect, and grow"). The site uses the logo's line.

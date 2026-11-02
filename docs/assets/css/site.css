@@ -193,7 +193,7 @@ html.hide-tbd .tbd { display: none; }
 .site-header { background: var(--cream); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 50; }
 .site-header .bar { display: flex; align-items: center; gap: 24px; min-height: 84px; }
 .logo { flex: 0 0 auto; display: block; padding: 8px 0; }
-.logo img { width: 200px; }
+.logo img { width: 240px; }
 .site-nav { margin-left: auto; }
 .nav-list { list-style: none; display: flex; align-items: center; gap: 4px 22px; margin: 0; padding: 0; }
 .nav-list > li { position: relative; }
@@ -207,9 +207,9 @@ html.hide-tbd .tbd { display: none; }
 .header-give { min-height: 44px; padding: 0 22px; }
 .nav-toggle { display: none; min-height: 44px; padding: 0 16px; border-radius: var(--pill); border: 2px solid var(--forest); background: transparent; color: var(--forest); font: 700 15px var(--font-sans); cursor: pointer; }
 
-@media (max-width: 1040px) {
+@media (max-width: 1180px) {
   .site-header .bar { gap: 12px; }
-  .logo img { width: 180px; }
+  .logo img { width: 216px; }
   .site-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--cream); border-bottom: 1px solid var(--rule);
     padding: 8px var(--gutter) 24px; max-height: calc(100vh - 84px); overflow-y: auto; }
   .site-nav.open { display: block; }
@@ -220,7 +220,9 @@ html.hide-tbd .tbd { display: none; }
   .header-give { margin-left: auto; }
   .nav-toggle { display: inline-flex; align-items: center; }
 }
-@media (max-width: 420px) { .logo img { width: 150px; } .header-give { padding: 0 16px; } }
+@media (max-width: 420px) { .logo img { width: 180px; } .header-give { padding: 0 16px; } }
+@media (max-width: 340px) { .site-header .logo img { width: 132px; } }
+@media (max-width: 380px) { .logo img { width: 150px; } .nav-toggle { padding: 0 12px; } .site-header .bar { gap: 8px; } }
 
 /* ---------- Site footer: forest, reversed logo ---------- */
 .site-footer { background: var(--forest); color: var(--cream); padding: 64px 0 40px; }
@@ -228,13 +230,56 @@ html.hide-tbd .tbd { display: none; }
 .site-footer .grid { display: flex; flex-wrap: wrap; gap: 40px; }
 .site-footer .grid > * { flex: 1 1 180px; min-width: 0; }
 .site-footer .grid > .brand { flex: 1.4 1 260px; }
-.site-footer .brand img { width: 180px; margin-bottom: 20px; }
+.site-footer .brand img { width: 100%; max-width: 280px; margin-bottom: 20px; }
 .site-footer h2 { font: 700 13px/1.3 var(--font-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--butter); margin: 0 0 12px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
-.site-footer li { font-size: 16px; line-height: 1.5; padding: 4px 0; }
+.site-footer li { font-size: 16px; line-height: 1.5; padding: 4px 0; overflow-wrap: anywhere; }
 .site-footer .small { max-width: 320px; }
 .site-footer .legal { border-top: 1px solid var(--rule-on-forest); margin-top: 40px; padding-top: 20px; font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
 .site-footer :focus-visible { outline-color: var(--butter); }
+
+/* ---------- Impact graphic (About) ---------- */
+.impact { text-align: center; }
+.impact-row { display: flex; align-items: flex-start; justify-content: center; gap: 20px; }
+.impact-stat { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; }
+.impact-num-wrap { position: relative; display: grid; place-items: center; min-width: 0; max-width: 100%; height: 150px; padding: 0 clamp(16px, 2.6vw, 34px); }
+.impact-blob { position: absolute; inset: 6px 0; border-radius: 58% 42% 55% 45% / 48% 56% 44% 52%; transition: transform 1s cubic-bezier(.2,.9,.25,1.15), opacity .6s ease; }
+.impact-stat:nth-child(1) .impact-blob { background: color-mix(in srgb, var(--eucalyptus) 38%, var(--cream)); }
+.impact-stat:nth-child(3) .impact-blob { background: color-mix(in srgb, var(--butter) 45%, var(--cream)); border-radius: 45% 55% 42% 58% / 55% 45% 55% 45%; }
+.impact-stat:nth-child(5) .impact-blob { background: color-mix(in srgb, #88AEB8 34%, var(--cream)); border-radius: 52% 48% 60% 40% / 42% 58% 46% 54%; }
+.impact-num { position: relative; display: grid; margin: 0; font: 500 clamp(64px, 7.5vw, 104px)/1 var(--font-display); color: var(--forest); font-variant-numeric: lining-nums tabular-nums; letter-spacing: -.02em; transition: opacity .6s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+.impact-num > span { grid-area: 1/1; }
+.impact-ghost { visibility: hidden; }
+.impact-label { margin: 14px 0 0; max-width: 20ch; text-wrap: balance; font-size: 17px; line-height: 1.45; color: var(--charcoal); transition: opacity .6s ease .25s, transform .7s ease .25s; }
+.impact-trail { flex: 0 1 170px; min-width: 70px; margin-top: 28px; }
+.impact-trail svg { display: block; width: 100%; height: auto; overflow: visible; }
+.impact-trail .v { display: none; }
+.impact-dots { fill: none; stroke: var(--wheat-gold); stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: .1 9; }
+.impact-reveal { fill: none; stroke: #fff; stroke-width: 14; stroke-linecap: round; transition: stroke-dashoffset 1.1s cubic-bezier(.45,.05,.3,1); }
+.impact-arrow { fill: none; stroke: var(--wheat-gold); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.impact-pop { transform-box: fill-box; transform-origin: center; transition: opacity .35s ease, transform .5s cubic-bezier(.3,1.6,.5,1); }
+.impact-hoof { fill: var(--forest); opacity: .55; }
+.impact-leaf { fill: var(--eucalyptus); }
+.impact-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* Animation start states apply only once the script has armed the graphic, so it is
+   always complete without JavaScript or with reduced motion. */
+.impact.armed .impact-blob { transform: scale(.4) rotate(-12deg); opacity: 0; }
+.impact.armed .impact-num { opacity: 0; transform: translateY(14px); }
+.impact.armed .impact-label { opacity: 0; transform: translateY(10px); }
+.impact.armed .impact-pop { opacity: 0; transform: scale(.3); }
+.impact.armed .is-in .impact-blob, .impact.armed .is-in .impact-num, .impact.armed .is-in .impact-label { opacity: 1; transform: none; }
+.impact.armed .impact-trail.is-in .impact-pop { opacity: 1; transform: scale(1); }
+.impact-trail.is-in .impact-pop.d1 { transition-delay: .35s; }
+.impact-trail.is-in .impact-pop.d2 { transition-delay: .6s; }
+.impact-trail.is-in .impact-pop.d3 { transition-delay: 1s; }
+@media (max-width: 1020px) {
+  .impact-row { flex-direction: column; align-items: center; gap: 0; }
+  .impact-trail { flex: none; width: 96px; margin: 4px 0 8px; align-self: center; }
+  .impact-trail .h { display: none; }
+  .impact-trail .v { display: block; }
+  .impact-num-wrap { min-width: 170px; height: 136px; padding: 0 34px; }
+}
+@media (prefers-reduced-motion: reduce) { .impact * { transition: none !important; } }
 
 /* 404 */
 .goat { width: 72px; margin: 0 auto 20px; }

@@ -45,9 +45,16 @@ def rewrite(html, page_path, key):
             return m.group(0)
         return f'href="#{target}--{u.fragment}"' if u.fragment else f'href="#{target}"'
 
+    # The review viewer can't frame other sites, so show the calendar as a link here.
+    html = re.sub(r'<div class="embed"><iframe src="([^"]+)"[^>]*></iframe></div>',
+                  lambda m: '<div class="embed empty">The live Google Calendar shows here on the real site. '
+                            f'<a href="{m.group(1)}">Open the farm calendar</a></div>', html)
+    html = re.sub(r'<script src="/assets/js/([\w-]+\.js)" defer></script>',
+                  lambda m: "<script>" + (DOCS / "assets/js" / m.group(1)).read_text() + "</script>", html)
     html = re.sub(r'(href|src)="([^"]*)"', href, html)
     if key:
         html = re.sub(r'\b(id|aria-labelledby)="([^"]+)"', lambda m: f'{m.group(1)}="{key}--{m.group(2)}"', html)
+        html = re.sub(r'url\(#([\w-]+)\)', lambda m: f'url(#{key}--{m.group(1)})', html)
     return html
 
 
