@@ -6,17 +6,19 @@ Everything still needed before launch. Butter-highlighted [brackets] must all be
 - [ ] Confirm main email (linda@warmspringscarefarm.org) and that texting the phone to book is OK — **config** + Visits
 - [x] Donate link (Givebutter) — **config** `donate_url` (givebutter.com/eju5dV, Nov 2)
 - [ ] Adult, child, and volunteer waiver links (current Google Form?) — **config**
-- [ ] Barn Club timing and suggested donation — Programs
+- [x] Barn Club suggested donation ($25/week, Nov 12)
+- [ ] Barn Club timing — Programs
 - [ ] Drop-off policy for Barn Club — Programs FAQ
-- [ ] Parking, restroom, accessibility — Visits
-- [ ] Weather cancellation policy — Visits FAQ
+- [x] Parking, restroom, accessibility — removed from Visits (Nov 12)
+- [x] Weather cancellation policy — Visits FAQ (snow, lightning within 5 miles; Nov 12)
 - [x] Teen volunteer quote permission — Home, Volunteer (confirmed Oct 29)
 - [x] EIN — **config** `ein` (87-1279392, Nov 2)
 - [ ] Current team titles and board list — About
 
 ## Partner programs
-- [ ] Mind and Body Medicine: partner name, format, ages, registration link — Programs, About partners
-- [ ] Self Defense: partner name, format, ages, registration link — Programs, About partners
+- [x] Mind and Body Medicine: Rhythms of Connection, registration link — Programs (Nov 12)
+- [ ] Mind and Body Medicine: add to About partners list
+- [ ] Self Defense: partner name, format, registration link (ages: junior high, Nov 12) — Programs, About partners
 - [ ] Animal-assisted therapy: who delivers sessions (Carbon's Hoofprints?) — Programs
 - [ ] Fox & Kids Studio registration link — **config** `fox_kids_url`
 - [ ] School or college service-hour partner — Volunteer
@@ -45,7 +47,6 @@ Everything still needed before launch. Butter-highlighted [brackets] must all be
 - [x] Calendar embed — **config** (Nov 2)
 - [ ] Newsletter form, Instagram/Facebook links — **config**
 - [ ] Blog address (Ghost subdomain) — **config** `blog_url`; header Blog link points to "#" until set
-- [ ] Confirm Impact numbers (5 acres, 15 animals, 5,000 therapy hours) — About
 - [ ] Event link for "Help at farm events" — Volunteer
 - [ ] Photos for each placeholder (see README)
 - [ ] Choose the tagline (logo: "A place to gather and grow"; brand guidelines: "A place to heal, connect, and grow"). The site uses the logo's line.
