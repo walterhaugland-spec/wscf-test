@@ -131,12 +131,15 @@ p:last-child { margin-bottom: 0; }
 .mv-item:last-child { padding-right: 0; }
 .mv-text { font: 400 28px/1.35 var(--font-display); color: var(--cream); margin: 0; }
 .mv-more { text-align: center; margin: 40px 0 0; }
+.mv-def { max-width: 760px; margin: 40px auto 0; padding-top: 36px; border-top: 1px solid var(--rule-on-forest); text-align: center; }
+.mv-def-text { font: italic 400 24px/1.4 var(--font-display); color: var(--cream); margin: 0; }
 @media (max-width: 760px) {
   .mv-band { padding: 56px 0; }
   .mv-grid { grid-template-columns: 1fr; }
   .mv-item, .mv-item:first-child, .mv-item:last-child { padding: 0; }
   .mv-item + .mv-item { border-left: 0; border-top: 1px solid var(--rule-on-forest); margin-top: 28px; padding-top: 28px; }
   .mv-text { font-size: 23px; }
+  .mv-def-text { font-size: 21px; }
 }
 
 /* ---------- Photo slot ---------- */
