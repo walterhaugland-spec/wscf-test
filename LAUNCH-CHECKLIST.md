@@ -19,7 +19,7 @@ Everything still needed before launch. Butter-highlighted [brackets] must all be
 - [x] Mind and Body Medicine: Rhythms of Connection, registration link — Programs (Nov 12)
 - [ ] Mind and Body Medicine: add to About partners list
 - [ ] Self Defense: partner name, format, registration link (ages: junior high, Nov 12) — Programs, About partners
-- [ ] Animal-assisted therapy: who delivers sessions (Carbon's Hoofprints?) — Programs
+- [x] Animal-assisted therapy card removed from Programs (Nov 17)
 - [ ] Fox & Kids Studio registration link — **config** `fox_kids_url`
 - [ ] School or college service-hour partner — Volunteer
 
@@ -46,7 +46,7 @@ Everything still needed before launch. Butter-highlighted [brackets] must all be
 ## Nice to have
 - [x] Calendar embed — **config** (Nov 2)
 - [ ] Newsletter form, Instagram/Facebook links — **config**
-- [ ] Blog address (Ghost subdomain) — **config** `blog_url`; header Blog link points to "#" until set
+- [x] Blog address — **config** `blog_url` (Wix blog at walterhaugland.wixsite.com/warmsprings-care-far, Nov 17)
 - [ ] Event link for "Help at farm events" — Volunteer
 - [ ] Photos for each placeholder (see README)
 - [ ] Choose the tagline (logo: "A place to gather and grow"; brand guidelines: "A place to heal, connect, and grow"). The site uses the logo's line.
